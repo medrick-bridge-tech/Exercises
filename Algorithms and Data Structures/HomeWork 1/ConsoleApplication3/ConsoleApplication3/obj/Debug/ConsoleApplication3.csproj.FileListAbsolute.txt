@@ -1,0 +1,6 @@
+C:\Users\arman\RiderProjects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\arman\RiderProjects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\arman\RiderProjects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csproj.AssemblyReference.cache
+C:\Users\arman\RiderProjects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csproj.CoreCompileInputs.cache
+C:\Users\arman\RiderProjects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\arman\RiderProjects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
