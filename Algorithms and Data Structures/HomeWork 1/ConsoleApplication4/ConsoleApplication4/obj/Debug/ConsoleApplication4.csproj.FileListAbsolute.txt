@@ -1,6 +1,0 @@
-C:\Users\arman\RiderProjects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
-C:\Users\arman\RiderProjects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
-C:\Users\arman\RiderProjects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.AssemblyReference.cache
-C:\Users\arman\RiderProjects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.CoreCompileInputs.cache
-C:\Users\arman\RiderProjects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
-C:\Users\arman\RiderProjects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
