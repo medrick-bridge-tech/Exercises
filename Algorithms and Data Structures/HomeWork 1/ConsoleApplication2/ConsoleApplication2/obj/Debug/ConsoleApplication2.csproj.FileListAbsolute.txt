@@ -1,6 +1,0 @@
-C:\Users\arman\RiderProjects\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
-C:\Users\arman\RiderProjects\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
-C:\Users\arman\RiderProjects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csproj.AssemblyReference.cache
-C:\Users\arman\RiderProjects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csproj.CoreCompileInputs.cache
-C:\Users\arman\RiderProjects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
-C:\Users\arman\RiderProjects\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
