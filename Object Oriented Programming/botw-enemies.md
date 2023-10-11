@@ -1,4 +1,4 @@
-# Exercise: JSON Data Parsing for an Online Game
+# Exercise: Breath of the Wild enemies hierarchy
 
 **Objective:** The goal of this exercise is to create a hierarchy of classes of enemies in the game The Legend of Zelda: Breath of the Wild to get familiar with inheritence in C#.
 
