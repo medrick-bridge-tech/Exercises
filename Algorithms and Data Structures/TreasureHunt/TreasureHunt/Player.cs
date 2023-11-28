@@ -1,3 +1,5 @@
+using System;
+
 namespace TreasureHunt
 {
     public class Player
@@ -16,10 +18,23 @@ namespace TreasureHunt
 
         public int PlayerMoves => _playerMoves;
 
-        public Player(int x, int y, int movesLeft)
+        public Player(Map map, int movesLeft)
         {
-            _playerPosition = new[] { x, y };
             _playerMoves = movesLeft;
+            SetRandomPosition(map);
+        }
+
+        private void SetRandomPosition(Map map)
+        {
+            var random = new Random();
+            int x, y;
+            do
+            {
+                x = random.Next(map.MapX);
+                y = random.Next(map.MapY);
+            } while (x != map.TreasureX && y != map.TreasureY && x != map.TrapX && y != map.TrapY);
+
+            _playerPosition = new[] { x, y };
         }
     }
 }
