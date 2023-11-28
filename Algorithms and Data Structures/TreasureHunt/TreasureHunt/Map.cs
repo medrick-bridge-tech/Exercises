@@ -7,12 +7,16 @@ namespace TreasureHunt
         private int[,] _map;
         private int _mapX;
         private int _mapY;
+        private int _maxValue;
+        private int _minValue;
         private int[] _treasurePosition = new int[2];
         private int[] _trapPosition = new int[2];
 
         public int[,] MapGrid => _map;
         public int MapX => _mapX;
         public int MapY => _mapY;
+        public int MaxValue => _maxValue;
+        public int MinValue => _minValue;
         public int TreasureX => _treasurePosition[0];
         public int TreasureY => _treasurePosition[1];
         public int TrapX => _trapPosition[0];
@@ -26,6 +30,7 @@ namespace TreasureHunt
             Initialize();
             FindTreasure();
             FindTrap();
+            OptimizeMap();
         }
 
         private void Initialize()
@@ -67,6 +72,7 @@ namespace TreasureHunt
                 }
             }
 
+            _maxValue = maxValue;
             return maxValueIndex;
         }
 
@@ -86,6 +92,7 @@ namespace TreasureHunt
                 }
             }
 
+            _minValue = minValue;
             return minValueIndex;
         }
 
@@ -117,6 +124,25 @@ namespace TreasureHunt
                     }
                 }
                 Console.WriteLine();
+            }
+        }
+
+        private void OptimizeMap()
+        {
+            for (var i = 0; i < _mapX; i++)
+            {
+                for (var j = 0; j < _mapY; j++)
+                {
+                    if (_map[i, j] == _maxValue && i != TreasureX && j != TreasureY)
+                    {
+                        _map[i, j]--;
+                    }
+                    
+                    if (_map[i, j] == _minValue && i != TrapX && j != TrapY)
+                    {
+                        _map[i, j]++;
+                    }
+                }
             }
         }
     }
