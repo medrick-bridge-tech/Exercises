@@ -6,8 +6,10 @@ namespace TreasureHunt
     {
         public static void Main(string[] args)
         {
-            Map map = new Map(5, 5);
-            Player player = new Player(map, 10);
+            const int maxValue = 10;
+            const int minValue = 0;
+            var map = new Map(5, 5,maxValue,minValue);
+            var player = new Player(map, 10);
             StartGame(player,map);
         }
 
