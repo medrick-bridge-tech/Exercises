@@ -44,21 +44,9 @@ namespace TreasureHunt
             {
                 for (var j = 0; j < _mapY; j++)
                 {
-                    _map[i, j] = random.Next(_minValue+1,_maxValue);
+                    _map[i, j] = random.Next(_minValue,_maxValue+1);
                 }
             }
-
-            int minPositionX, minPositionY, maxPositionX, maxPositionY;
-            do
-            {
-                minPositionX = random.Next(_mapX);
-                minPositionY = random.Next(_mapY);
-                maxPositionX = random.Next(_mapX);
-                maxPositionY = random.Next(_mapY);
-            } while (minPositionX == maxPositionX && minPositionY == maxPositionY);
-
-            _map[minPositionX, minPositionY] = _minValue;
-            _map[maxPositionX, maxPositionY] = _maxValue;
         }
 
         private void FindTreasure()
