@@ -22,15 +22,18 @@ namespace TreasureHunt
         public int TrapX => _trapPosition[0];
         public int TrapY => _trapPosition[1];
 
-        public Map(int width, int height)
+        public Map(int width, int height, int maxValue, int minValue)
         {
             _mapX = width;
             _mapY = height;
+            
+            _maxValue = maxValue;
+            _minValue = minValue;
+            
             _map = new int[_mapX,_mapY];
             Initialize();
             FindTreasure();
             FindTrap();
-            OptimizeMap();
         }
 
         private void Initialize()
@@ -41,9 +44,21 @@ namespace TreasureHunt
             {
                 for (var j = 0; j < _mapY; j++)
                 {
-                    _map[i, j] = random.Next(10);
+                    _map[i, j] = random.Next(_minValue+1,_maxValue);
                 }
             }
+
+            int minPositionX, minPositionY, maxPositionX, maxPositionY;
+            do
+            {
+                minPositionX = random.Next(_mapX);
+                minPositionY = random.Next(_mapY);
+                maxPositionX = random.Next(_mapX);
+                maxPositionY = random.Next(_mapY);
+            } while (minPositionX == maxPositionX && minPositionY == maxPositionY);
+
+            _map[minPositionX, minPositionY] = _minValue;
+            _map[maxPositionX, maxPositionY] = _maxValue;
         }
 
         private void FindTreasure()
@@ -72,8 +87,7 @@ namespace TreasureHunt
                     }
                 }
             }
-
-            _maxValue = maxValue;
+            
             return maxValueIndex;
         }
 
@@ -93,8 +107,7 @@ namespace TreasureHunt
                     }
                 }
             }
-
-            _minValue = minValue;
+            
             return minValueIndex;
         }
 
@@ -126,25 +139,6 @@ namespace TreasureHunt
                     }
                 }
                 Console.WriteLine();
-            }
-        }
-
-        private void OptimizeMap()
-        {
-            for (var i = 0; i < _mapX; i++)
-            {
-                for (var j = 0; j < _mapY; j++)
-                {
-                    if (_map[i, j] == _maxValue && i != TreasureX && j != TreasureY)
-                    {
-                        _map[i, j]--;
-                    }
-                    
-                    if (_map[i, j] == _minValue && i != TrapX && j != TrapY)
-                    {
-                        _map[i, j]++;
-                    }
-                }
             }
         }
     }
