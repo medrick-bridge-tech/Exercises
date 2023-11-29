@@ -67,7 +67,8 @@ namespace TreasureHunt
                     if (_map[i, j] > maxValue)
                     {
                         maxValue = _map[i, j];
-                        maxValueIndex = new[] { i, j };
+                        maxValueIndex[0] = i;
+                        maxValueIndex[1] = j;
                     }
                 }
             }
@@ -87,7 +88,8 @@ namespace TreasureHunt
                     if (_map[i, j] < minValue)
                     {
                         minValue = _map[i, j];
-                        minValueIndex = new[] { i, j };
+                        minValueIndex[0] = i;
+                        minValueIndex[1] = j;
                     }
                 }
             }
